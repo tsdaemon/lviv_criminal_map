@@ -1,16 +1,12 @@
 Sys.setlocale("LC_CTYPE", "ukrainian")
-library(jsonlite)
 library(leaflet)
+library(geojsonio)
 
 criminal <- read.csv("../criminal.csv", encoding="UTF-8")
-districts <- readLines("../polygons/district.geo.json", warn=FALSE) %>% 
-              paste(collapse = "\n") %>%
-              fromJSON(simplifyVector = FALSE)
+# districts_geo <- readLines("../district.geo.json", warn=FALSE, encoding="UTF-8") %>% 
+#               paste(collapse = "\n") %>%
+#               fromJSON(simplifyVector = FALSE)
 
-districts$style = list(
-  weight = 1,
-  color = "#f03b20",
-  fillColor = "#f03b20",
-  opacity = 1,
-  fillOpacity = 0.3
-)
+districts_geo <- geojson_read("../district.geo.json", encoding="UTF-8")
+
+districts_data <- read.csv("../district.csv", encoding="UTF-8")
