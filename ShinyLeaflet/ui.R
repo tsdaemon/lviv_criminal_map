@@ -31,10 +31,17 @@ navbarPage("Кримінальні випадки Львова", id="nav",
             
             h2("Налаштування"),
             
-            
             selectInput("type", "Тип запису", type_vals, selected = "all"),
             
-            selectInput("presentation", "Представлення", presentation_vals, selected = "bydistrict")
+            checkboxInput("dots", "Точки"),
+            
+            checkboxInput("heatmap", "Heatmap"),
+            
+            checkboxInput("bydistrict", "Райони", value = TRUE),
+            
+            #selectInput("presentation", "Представлення", presentation_vals, selected = "bydistrict"),
+            
+            plotOutput("bydistrictBarChart", height = 400)
         ),
         
         tags$div(id="cite",
