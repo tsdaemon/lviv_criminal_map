@@ -39,13 +39,11 @@ navbarPage("Кримінальні випадки Львова", id="nav",
             
             checkboxInput("bydistrict", "Райони", value = TRUE),
             
-            #selectInput("presentation", "Представлення", presentation_vals, selected = "bydistrict"),
-            
             plotOutput("bydistrictBarChart", height = 400)
         ),
         
         tags$div(id="cite",
-           'Підготоване з використанням ', tags$a(href='http://opendata.city-adm.lviv.ua/', "Портала відкритих даних Львова"), ' Анатолієм Стегнієм (2017).'
+           'Підготовано з використанням ', tags$a(href='http://opendata.city-adm.lviv.ua/', "Портала відкритих даних Львова"), ' Анатолієм Стегнієм (2017).'
          )
       )
    )
