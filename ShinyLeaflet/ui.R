@@ -11,9 +11,9 @@ type_vals <- c("Усі" = "all",
                "Шахрайства" = "fraud")
 
 # Choices for drop-downs
-navbarPage("Кримінальні випадки Львова", id="nav",
+navbarPage("Кримінальна карта Львова", id="nav",
            
-    tabPanel("Карта",
+    tabPanel("",
       div(class="outer",
           
         tags$head(

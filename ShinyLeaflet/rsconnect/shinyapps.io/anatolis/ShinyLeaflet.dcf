@@ -3,8 +3,8 @@ title: ShinyLeaflet
 account: anatolis
 server: shinyapps.io
 appId: 171266
-bundleId: 784342
+bundleId: 784368
 url: https://anatolis.shinyapps.io/ShinyLeaflet/
-when: 1491870004.62105
+when: 1491871264.33047
 asMultiple: FALSE
 asStatic: FALSE
